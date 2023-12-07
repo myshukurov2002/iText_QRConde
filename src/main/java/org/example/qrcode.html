@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML to PDF with QR Code</title>
+</head>
+<body>
+<!-- Your HTML content with a form for input -->
+<form id="myForm">
+    <!-- A lot of information inputs go here -->
+    <label for="info">Information:</label>
+    <input type="text" id="info" name="info" required>
+
+    <!-- Submit button -->
+    <button type="button" onclick="generatePDF()">Generate PDF</button>
+</form>
+
+<!-- Placeholder for the QR code -->
+<div id="qrcode"></div>
+
+<!-- Include the necessary libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+<script>
+    // Function to generate PDF
+    function generatePDF() {
+        // Get the information from the form
+        // var info = document.getElementById("info");
+
+        // Update the QR code with the information
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: info,
+            width: 256,
+            height: 256
+        });
+
+        // Convert HTML to PDF
+        var element = document.getElementById("myForm");
+        html2pdf(element);
+    }
+</script>
+</body>
+</html>

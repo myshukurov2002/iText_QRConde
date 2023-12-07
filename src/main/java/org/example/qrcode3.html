@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML to PDF with QR Code</title>
+</head>
+<body>
+<!-- A hardcoded URL instead of an input label -->
+<p>QR Code URL: <strong>https://localhost:8080/api/v1/qrcode/generate/aaa08a66-2514-4258-8f0e-f7c0a5b87eaf</strong></p>
+
+<!-- Placeholder for the QR code -->
+<div id="qrcode"></div>
+
+<!-- Include the necessary libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+<script>
+    // Function to generate PDF
+    function generatePDF() {
+        // Hardcoded URL
+        var url = "https://localhost:8080/api/v1/qrcode/generate/aaa08a66-2514-4258-8f0e-f7c0a5b87eaf";
+
+        // Update the QR code with the URL
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: url,
+            width: 512,
+            height: 512
+        });
+
+        // Convert HTML to PDF
+        html2pdf(document.body);
+    }
+
+    // Automatically generate PDF when the page loads
+    generatePDF();
+</script>
+</body>
+</html>

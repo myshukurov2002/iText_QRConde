@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+        .page {
+            font-size: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page">
+
+            <h3>Ariza turi: Darsdan Javob olish bo'yicha</h3>
+
+            <p>
+                Ariza <b>Intellektual Axborot Tizimlari</b> Fakulteti <b>Dasturiy Injiniring</b> yo'nalishi
+                <b><i>2-kurs</i></b> talabaasi <b><i>Aliyev Ali Alijonovich</i></b> tomonidan taqdim etildi.
+            </p>
+            <b>Batafsil sababi:</b>
+            <p>Men sog'lig'im yomonligi tufayli do'xtir ko'rigidan o'tmoqchiman. Shu sababli 2023-yil 12-dekabrdan 2023-yil
+            15-chi dekabrgacha meni darslardan ozod qilishingizni so'rayman</p>
+            <h3>Ariza bo'yicha Mas'ul shaxslar:</h3>
+            <p>Palonchayev Pismadoncha <b>Arizani Tasdiqladi</b>.</p>
+            <p>Kalonchayev Kismadoncha <b>Arizani Tasdiqladi</b>.</p>
+            <p>Salonchayev Sismadoncha <b>Arizani Tasdiqladi</b>.</p>
+            <!-- Placeholder for the QR code -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="qrcode" style=" display: flex; flex-direction: column; align-items: center; justify-content: center"></div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdn.rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+            <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+            <script>
+                function generatePDF() {
+                    var url = "https://localhost:8080/api/v1/qrcode/generate/aaa08a66-2514-4258-8f0e-f7c0a5b87eaf";
+
+                    var qrcode = new QRCode(document.getElementById("qrcode"), {
+                        text: url,
+                        width: 128,
+                        height: 128,
+                    });
+
+                    html2pdf(document.body, {
+                        margin: 10,
+                        filename: 'document.pdf',
+                        image: { type: 'jpeg', quality: 1 },
+                        html2canvas: { scale: 2 },
+                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                    });
+                }
+
+                // Automatically generate PDF when the page loads
+                generatePDF();
+            </script></div>
+    </div>
+</body>
+</html>
