@@ -1,0 +1,118 @@
+.yourname-CV {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.yourname-CV .div {
+  background-color: #ffffff;
+  width: 595px;
+  height: 842px;
+  position: relative;
+}
+
+.yourname-CV .infos {
+  position: absolute;
+  width: 140px;
+  top: 140px;
+  left: 407px;
+  /*font-family: "Arial-Regular", Helvetica;*/
+  font-weight: 400;
+  color: #73808d;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.yourname-CV .text-wrapper {
+  /*font-family: "Arial-Regular", Helvetica;*/
+  font-weight: 400;
+  color: #73808d;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.yourname-CV .span {
+  /*font-family: "Arial-Bold", Helvetica;*/
+  font-weight: 700;
+}
+
+.yourname-CV .xp {
+  position: absolute;
+  width: 335px;
+  top: 140px;
+  left: 48px;
+  /*font-family: "Arial-Regular", Helvetica;*/
+  font-weight: 400;
+  color: transparent;
+  font-size: 7px;
+  line-height: 18px;
+}
+
+.yourname-CV .text-wrapper-2 {
+  color: #73808d;
+  letter-spacing: 2px;
+}
+
+.yourname-CV .text-wrapper-3 {
+  /*font-family: "Arial-Bold", Helvetica;*/
+  font-weight: 700;
+  color: #101214;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+
+.yourname-CV .text-wrapper-4 {
+  color: #101214;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+
+.yourname-CV .text-wrapper-5 {
+  color: #73808d;
+  font-size: 9px;
+  letter-spacing: 0;
+}
+
+.yourname-CV .title {
+  position: absolute;
+  width: 197px;
+  top: 48px;
+  left: 48px;
+  /*font-family: "Arial-Bold", Helvetica;*/
+  font-weight: 400;
+  color: #101214;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.yourname-CV .text-wrapper-6 {
+  font-weight: 700;
+}
+
+.yourname-CV .text-wrapper-7 {
+  /*font-family: "Arial-Regular", Helvetica;*/
+  font-size: 18px;
+}
+
+.yourname-CV .avatar {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 34px;
+  left: 403px;
+  object-fit: cover;
+}
+
+.yourname-CV .top-line {
+  position: absolute;
+  width: 595px;
+  height: 4px;
+  top: 0;
+  left: 0;
+  background-color: #101214;
+}

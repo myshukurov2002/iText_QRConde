@@ -1,0 +1,65 @@
+body {
+    font-family: "Times New Roman";
+}
+
+.page {
+    font-size: 16px;
+    width: 100%;
+    /*text-align: center;*/
+}
+
+.top {
+    text-align: center;
+}
+
+.flag {
+    height: 100px;
+    width: auto;
+}
+
+.hr1 {
+    color: darkblue;
+    border: 4px solid darkblue;
+}
+
+.hr2 {
+    color: darkblue;
+    border: 1px solid darkblue;
+    position: relative;
+    width: 100%;
+    top: -4px;
+}
+
+.head {
+    /*margin-top: 10px;*/
+}
+
+.head_items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.box_text {
+    display: flex;
+    justify-content: center;
+}
+
+.p_text {
+    text-align: justify;
+    word-spacing: -2px;
+    width: 70%;
+}
+
+/*.head_item_element {*/
+/*    display: flex;*/
+/*    justify-content: right;*/
+/*}*/
+
+h4, h5 {
+    color: #006087;
+}

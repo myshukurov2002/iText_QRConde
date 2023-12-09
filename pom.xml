@@ -28,16 +28,39 @@
             <artifactId>core</artifactId>
             <version>3.4.0</version>
         </dependency>
+
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>javase</artifactId>
             <version>3.4.0</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/net.glxn.qrgen/javase -->
         <dependency>
             <groupId>net.glxn.qrgen</groupId>
             <artifactId>javase</artifactId>
             <version>2.0</version>
+        </dependency>
+<!--        SVG TO IMAGE GENERATOR-->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-transcoder</artifactId>
+            <version>1.14</version> <!-- Use the latest version available -->
+        </dependency>
+
+
+<!--        IRONPDF-->
+        <dependency>
+            <groupId>com.ironsoftware</groupId>
+            <artifactId>ironpdf</artifactId>
+            <version>2023.4.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.9</version>
         </dependency>
 
 
